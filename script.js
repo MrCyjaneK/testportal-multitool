@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Testportal Multi Tool
 // @namespace    https://*.testportal.pl/
-// @version      1.0.1rc1
+// @version      1.0.0beta
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
 // @updateURL    https://mrcyjanek.net/files/raw-:D/Documents/Scripts/testportal.pl/script.js
@@ -15,7 +15,9 @@
 OwUKGkPT = (() => {})
 // eslint-disable-next-line
 onCountdownFinished = (() => { return 0 });
-
+//disable time limits
+// eslint-disable-next-line
+setInterval(() => {startTime = new Date().getTime()},777);
 (function() {
     'use strict';
     // Languages
