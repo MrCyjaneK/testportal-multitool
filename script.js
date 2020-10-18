@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Testportal Multi Tool
 // @namespace    https://*.testportal.pl/
-// @version      1.0.0beta
+// @version      1.0.1rc1
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
 // @updateURL    https://mrcyjanek.net/files/raw-:D/Documents/Scripts/testportal.pl/script.js
@@ -11,18 +11,13 @@
 // @grant        none
 // ==/UserScript==
 
-
-// If time has elapsed, don't do anything.
 // eslint-disable-next-line
-//OwUKGkPT = (() => {})
+OwUKGkPT = (() => {})
 // eslint-disable-next-line
-//onCountdownFinished = (() => { return 0 });
+onCountdownFinished = (() => { return 0 });
 
 (function() {
     'use strict';
-    // Remove ability to read focus value.
-    //console.log(document.hasFocus);
-    //document.hasFocus = (() => {return true});
     // Languages
     var languages_list = 'xa-ar xa-en ar-es au-en at-de be-fr be-nl br-pt bg-bg ca-en ca-fr ct-ca cl-es cn-zh co-es hr-hr cz-cs dk-da ee-et fi-fi fr-fr de-de gr-el hk-tzh hu-hu in-en id-id id-en ie-en il-he it-it jp-jp kr-kr lv-lv lt-lt xl-es my-ms my-en mx-es nl-nl nz-en no-no pe-es ph-en ph-tl pl-pl pt-pt ro-ro ru-ru sg-en sk-sk sl-sl za-en es-es se-sv ch-de ch-fr ch-it tw-tzh th-th tr-tr ua-uk uk-en us-en ue-es ve-es vn-vi wt-wt'.split(' ');
     if (!localStorage.hack_lang) {
@@ -31,17 +26,12 @@
     if (!localStorage.hack_lang_alter) {
         localStorage.hack_lang_alter = prompt("Oups! Jaki alternatywny język wybierasz? Polecam ci en-en jeśli jesteś dobry w angielskim. Język ten zostanie użyty do szukania odpowiedzi gdy nie będą ne dostępne w '"+localStorage.hack_lang+"'\nJeśli piszesz test np w języku Niemieckim to polecam zmienić język alternatywny na 'de-de'\n\n"+languages_list.join(', '));
     }
-    // So basically yandex is no longer free. Fuck 'em.
-    //if (!localStorage.yandexapi) {
-    //    localStorage.yandexapi = prompt("Oups! yandexapi is not defined! Please go to\nhttps://translate.yandex.com/developers/keys\nAnd create new api key, it is free to use :),\np.s. FV*K GOOGLE AND THEIR FV*ING LIMITS!",);
-    //}
     const language = localStorage.hack_lang;
     const languageAlter = localStorage.hack_lang_alter;
     const languageAlterSplit = languageAlter.split('-')[1];
     const languageSplit = language.split('-')[1];
-    //const yandexapi = localStorage.yandexapi;
 
-    const geneza = "Sorry że musisz to czytać ale wywalenie tego alert boxa rozwala strone, więc spokojnie kliknij ok. Korzystając z okazji, błędy zgłaszaj do @cyjan:mrcyjanek.net na matrixie (element.io)"
+    const geneza = "Sorry że musisz to czytać ale wywalenie tego alert boxa rozwala strone, więc spokojnie kliknij ok. Korzystając z okazji, błędy zgłaszaj do @cyjan:mrcyjanek.net na matrixie (element.io) albo github.com/MrCyjaneK/testportal-multitool na githubie."
     // Colors and texts
     if (localStorage.u_hakierMode) {
         const darkBackground = '#000'
@@ -63,7 +53,7 @@
     var infoElementText = `<span>Język: ${ language }</span> | <span>Język Alternatywny: ${ languageAlter }</span> <br />
 <a onclick="localStorage.clear(); window.location.href = window.location.href">reset config</a><br />
 Ch3@ts: <span id="cheatscount">???</span> <a onclick="document.cookie = 'blurs=0'">Wymuś zero</a> | <br />
-By: Czarek Nakamoto (mrcyjanek.net) | <a onclick="alert(\`${ geneza }\`)" >Dla Nauczyciela</a>. <br />
+By: Czarek Nakamoto (mrcyjanek.net) | <a onclick="alert(\`${ geneza }\`)" >Zgłoś błąd</a>. <br />
 Gdzie chcesz szukać informacji?<br />
 <label><input type="checkbox" ${ check(localStorage.u_hakier) } onclick="localStorage.u_googiel = this.checked" >Hakier mode</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_googiel) } onclick="localStorage.u_googiel = this.checked" >Googiel</label><br />
@@ -73,10 +63,8 @@ Gdzie chcesz szukać informacji?<br />
 <label><input type="checkbox" >***** ***</label><br />
 <hr>
 <!-- <a onclick="console.log(this); this.outerHTML = '<iframe width=99% height=700 src=https://mathsolver.microsoft.com/ ></iframe>'" >Kalkulator</a> -->
-</hr>
+</hr>`
 
-
-`
     var infoElement = createElementFromHTML(
         infoElementText
     );
@@ -88,12 +76,8 @@ Gdzie chcesz szukać informacji?<br />
             document.cookie = 'blurs=0';
         }
     },500);
-    // Disable uczciwy rozwiązujący technology
-    //TODO: focus sie sypie
-    //document.getElementById('honestRespondentWarning_popup').innerHTML = null;
-    // Disable error reporting
     window.onerror = (() => {console.log('Oups! I won\'t send this error report')})
-    // Definition next to questions
+    // Definicje obok pytań
     var ciala;
     var i;
     // Odpowiedzi
@@ -101,14 +85,12 @@ Gdzie chcesz szukać informacji?<br />
     for (i = 0; i < ciala.length; i++) {
         ((i, ciala) => {setTimeout(() => {odp(ciala[i])})})(i, ciala);
     }
-    // Obrazkki
-    // //
-    //var obrazki = documents.getElements
     // Pytania
     ciala = document.getElementsByClassName('question_essence');
     for (i = 0; i < ciala.length; i++) {
         ((i, ciala) => {setTimeout(() => {odp(ciala[i])})})(i, ciala);
     }
+    // Generowanie odpowiedzi.
     function odp(cialo) {
         var tresc_html = cialo.innerHTML;
         var tresc = cialo.innerText;
@@ -157,21 +139,6 @@ Gdzie chcesz szukać informacji?<br />
         cialo.innerHTML = tresc_html+odpowiedz
         cialo.innerHTML += "<hr />"
     }
-    // Put google on website:
-    //var iframe = document.createElement('iframe');
-    //iframe.width = '99%'
-    //iframe.height = '700'
-    //iframe.id = "hacifid"
-    //try {
-    //    iframe.src = 'https://www.google.com/search?igu=1&q='+encodeURI(document.getElementsByClassName('question_essence')[0].innerText);
-    //} catch (e) {
-    //    iframe.src = 'https://www.google.com/search?igu=1';
-    // }
-    // var a = document.createElement('a');
-    // a.setAttribute('onclick',"document.getElementById(\'hacifid\').src=\'https://www.google.com/search?igu=1\'");
-    // a.innerHTML = "Go Back To Google";
-    // document.body.appendChild(a);
-    // document.body.appendChild(iframe);
     function createElementFromHTML(htmlString) {
         var div = document.createElement('div');
         div.innerHTML = htmlString;
