@@ -173,6 +173,7 @@ Gdzie chcesz szukać informacji?<br />
         })(lazy,i)
     }
     var imgs = document.getElementsByTagName('img');
+    imgs = [] //todo
     for (i = 0; i < imgs.length; i++) {
         ((imgs, i) => {
             setTimeout(() => {
