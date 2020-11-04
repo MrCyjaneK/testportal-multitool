@@ -9,12 +9,17 @@ Dodatek działa w firefoxie jeśli używasz teamsy, jak nauczyciel dał ci link 
 
 # Funkcje
 
-[x] Automatyczne wyszukiwanie odpowiedzi w
+- [x] Automatyczne wyszukiwanie odpowiedzi w
+
     - [x] Google
+    
     - [x] Wyszukiwanie obrazków w google
+    
     - [x] DuckDuckGo (po api w 2 językach)
-[x] Omijanie limitów czasowych
-[x] Znika blokada na opuszczanie testu
+
+- [x] Omijanie limitów czasowych
+
+- [x] Znika blokada na opuszczanie testu
 
 # Pomocy!
 
