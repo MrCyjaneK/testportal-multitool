@@ -64,7 +64,7 @@ Gdzie chcesz szukać informacji?<br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczkaA) } onclick="localStorage.u_kaczkaA = this.checked" >Kaczka ${ languageAlter }</label><br />
 <label><input type="checkbox" >***** ***</label><br />
 <hr>
-<!-- <a onclick="console.log(this); this.outerHTML = '<iframe width=99% height=700 src=https://mathsolver.microsoft.com/ ></iframe>'" >Kalkulator</a> -->
+<details><summary>Calculator</summary><iframe width=99% height=700 src=https://www.cymath.com/ ></iframe></details>
 </hr>`
 
     var infoElement = createElementFromHTML(
