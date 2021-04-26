@@ -38,4 +38,4 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA NIE DZIAŁA GOOGLE W TEAMSACH!
  - Kliknij shift (lub ctrl, nie pamiętam) i prawy przycisk myszy w ramke z testportalem w teamsach, potem kliknij ramka i otwórz w nowej karcie.
  
  
-Pytania, problemy? [Napisz do mnie](https://mrcyjanek.net/me.php)
+Pytania, problemy? [Napisz do mnie](https://mrcyjanek.net/)
