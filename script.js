@@ -10,14 +10,13 @@
 // @match        https://*.testportal.pl/*
 // @grant        none
 // ==/UserScript==
-console.log('[TESTPORTA MULTITOOL] Started')
+console.log('[TESTPORTAL MULTITOOL] Started')
 // eslint-disable-next-line
 OwUKGkPT = (() => {})
 // eslint-disable-next-line
 onCountdownFinished = (() => { return 0 });
 setInterval(() => {window.wrappedJSObject.startTime = new Date().getTime()},777);
 setTimeout(() => {
-    
     RegExp.prototype.test = function (s) {
         if (this.toString().includes("native code") && this.toString().includes("function")) {
             return true;
@@ -81,10 +80,12 @@ Gdzie chcesz szukać informacji?<br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczka) } onclick="localStorage.u_kaczka = this.checked" >Kaczka ${ language }</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczkaA) } onclick="localStorage.u_kaczkaA = this.checked" >Kaczka ${ languageAlter }</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_jpis) } onclick="localStorage.u_jpis = this.checked">***** ***</label><br />
+<iframe width=99% heigh=128 src="https://mrcyjanek.net/projects/testportal-multitool/info.json" ></iframe>
 <!-- ${document.getElementsByClassName('logo_wide')[0].src} -->
 <hr />
-<details><summary>Calculator</summary><iframe width=99% height=700 src=https://www.cymath.com/ ></iframe></details>
+<details><summary>Calculator</summary><iframe width=99% height=700 src="https://www.cymath.com/" ></iframe></details>
 <hr />`
+
 let honest = document.getElementsByClassName('honest-respondent-text')
 if (honest[0]) {
     honest[0].innerHTML = `W teście zastosowano technologię <i><b>"Uczciwy rozwiązujący"</b></i>. Jednak spokojna głowa, klikaj poza obszarem testu, rób co chcesz. Żadna próba opuszczenia karty przeglądarki z testem nie zostanie odnotowana. Przed rozpoczęciem zalecam otwarcie notatek, żebyś potem nie musiał ich szukać. <br />Powodzenia mordo, siedze w tym bagnie razem z tobą<br /><a href="https://mrcyjanek.net" target="_blank">Czarek Nakamoto.</a>`
