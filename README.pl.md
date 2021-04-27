@@ -2,6 +2,11 @@
 
 Siema mordy, to jest mój dodatek, a [to jestem ja.](https://mrcyjanek.net/) Dziękuje za zainteresowanie.
 
+## Pobierańsko
+
+[![Firefox Addon](static/firefox.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi)
+
+
 Bez zbędnych pierdól - co to umie?
 
 |    |      |   |

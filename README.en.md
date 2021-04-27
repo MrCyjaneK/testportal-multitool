@@ -1,8 +1,13 @@
 # [EN] TestPortal MultiTool
 
+
 Sup ladies, my name is [Slim Shady.](https://mrcyjanek.net/) I'm a lead developer of this piece of shit.
 
-So what can this tool do?
+## Downloads
+
+[![Firefox Addon](static/firefox.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi)
+
+## So what can this tool do?
 
 |    |      |   |
 | -- |------| - |
