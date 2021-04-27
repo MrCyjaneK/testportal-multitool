@@ -6,6 +6,8 @@ This document is available in polish and english:
 | - | - |
 | [![Polish](static/flags/pl.svg)](https://mrcyjanek.net/projects/testportal-multitool/README.pl.html) | [![English](static/flags/us.svg)](https://mrcyjanek.net/projects/testportal-multitool/README.en.html) |
 
+<!-- teachers, -->[Read my blog post about why this addon is needed.](https://mrcyjanek.net/blog/9996-TestPortal-I-am-here.html)
+
 
 ## _Duck_ I'm in a rush! Show me downloads
 
