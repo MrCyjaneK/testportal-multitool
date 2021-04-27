@@ -70,6 +70,7 @@ Gdzie chcesz szukać informacji?<br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczka) } onclick="localStorage.u_kaczka = this.checked" >Kaczka ${ language }</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczkaA) } onclick="localStorage.u_kaczkaA = this.checked" >Kaczka ${ languageAlter }</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_jpis) } onclick="localStorage.u_jpis = this.checked">***** ***</label><br />
+<!-- ${document.getElementsByClassName('logo_wide')[0].src} -->
 <hr />
 <details><summary>Calculator</summary><iframe width=99% height=700 src=https://www.cymath.com/ ></iframe></details>
 <hr />`
