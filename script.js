@@ -4,8 +4,8 @@
 // @version      1.1.1beta
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
-// @updateURL    https://mrcyjanek.net/files/raw-:D/Documents/Scripts/testportal.pl/script.js
-// @downloadURL  https://mrcyjanek.net/files/raw-:D/Documents/Scripts/testportal.pl/script.js
+// @updateURL    https://github.com/MrCyjaneK/testportal-multitool/raw/main/script.js
+// @downloadURL  https://github.com/MrCyjaneK/testportal-multitool/raw/main/script.js
 // @match        https://*.testportal.net/*
 // @match        https://*.testportal.pl/*
 // @grant        none
