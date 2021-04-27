@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Testportal Multi Tool
 // @namespace    https://*.testportal.pl/
-// @version      1.0.0beta
+// @version      1.1.1beta
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
 // @updateURL    https://mrcyjanek.net/files/raw-:D/Documents/Scripts/testportal.pl/script.js
-// @downloadURL  https://mrcyjanek.net/files/:D/Documents/Scripts/testportal.pl/script.js
+// @downloadURL  https://mrcyjanek.net/files/raw-:D/Documents/Scripts/testportal.pl/script.js
 // @match        https://*.testportal.net/*
 // @match        https://*.testportal.pl/*
 // @grant        none
@@ -28,6 +28,13 @@ setInterval(() => {startTime = new Date().getTime()},777);
     if (!localStorage.hack_lang_alter) {
         localStorage.hack_lang_alter = prompt("Oups! Jaki alternatywny język wybierasz? Polecam ci en-en jeśli jesteś dobry w angielskim. Język ten zostanie użyty do szukania odpowiedzi gdy nie będą ne dostępne w '"+localStorage.hack_lang+"'\nJeśli piszesz test np w języku Niemieckim to polecam zmienić język alternatywny na 'de-de'\n\n"+languages_list.join(', '));
     }
+    localStorage.imie = "a";
+    //if (!localStorage.imie) {
+    //    alert('Okej, a teraz ważne info');
+    //    alert('Jestem w stanie przesyłać odpowiedzi między uczestnikami testu, aby to robić muszę znać twoje imie (albo nick czy coś)');
+    //    localStorage.imie = prompt("Tak więc jak mam cię nazywać?", Math.random()
+    //                              );
+    //}
     const language = localStorage.hack_lang;
     const languageAlter = localStorage.hack_lang_alter;
     const languageAlterSplit = languageAlter.split('-')[1];
@@ -35,16 +42,16 @@ setInterval(() => {startTime = new Date().getTime()},777);
 
     const geneza = "Sorry że musisz to czytać ale wywalenie tego alert boxa rozwala strone, więc spokojnie kliknij ok. Korzystając z okazji, błędy zgłaszaj do @cyjan:mrcyjanek.net na matrixie (element.io) albo github.com/MrCyjaneK/testportal-multitool na githubie."
     // Colors and texts
-    if (localStorage.u_hakierMode) {
+    if (localStorage.u_hakierMode == "true") {
         const darkBackground = '#000'
         const lightForeground = '#fff'
-        document.getElementsByClassName('test-body-background')[0].style = "background-color: "+darkBackground+"; color: "+lightForeground+";";
-        document.getElementsByClassName('question-area')[0].style = "background-color: "+darkBackground+"; color: "+lightForeground+";";
-        document.body.style = "background-color: "+darkBackground+"; color: "+lightForeground+";";
+        try { document.getElementsByClassName('test-body-background')[0].style = "background-color: "+darkBackground+"; color: "+lightForeground+";"; } catch (e) {console.warn(e)}
+        try { document.getElementsByClassName('question-area')[0].style = "background-color: "+darkBackground+"; color: "+lightForeground+";"; } catch (e) {console.warn(e)}
+        try { document.body.style = "background-color: "+darkBackground+"; color: "+lightForeground+";"; } catch (e) {console.warn(e)}
         //document.getElementsByClassName('logo_wide logo_default')[0].src = "https://mrcyjanek.net/testportal-logo.svg";
-        document.getElementsByClassName('warning_wrap warning-typography')[0].style = "text-align: left; font-family: monospace";
+        try { document.getElementsByClassName('warning_wrap warning-typography')[0].style = "text-align: left; font-family: monospace"; } catch (e) {console.warn(e)}
     }
-    document.getElementsByClassName('warning_icon_text warning_col1')[0].innerText = geneza;
+    try { document.getElementsByClassName('warning_icon_text warning_col1')[0].innerText = geneza; } catch (e) {console.warn(e)}
     function check(c) {
         if ( c == "true" ) {
             return "checked"
@@ -57,15 +64,15 @@ setInterval(() => {startTime = new Date().getTime()},777);
 Ch3@ts: <span id="cheatscount">???</span> <a onclick="document.cookie = 'blurs=0'">Wymuś zero</a> | <br />
 By: Czarek Nakamoto (mrcyjanek.net) | <a onclick="alert(\`${ geneza }\`)" >Zgłoś błąd</a>. <br />
 Gdzie chcesz szukać informacji?<br />
-<label><input type="checkbox" ${ check(localStorage.u_hakier) } onclick="localStorage.u_googiel = this.checked" >Hakier mode</label><br />
+<label><input type="checkbox" ${ check(localStorage.u_hakierMode) } onclick="localStorage.u_hakierMode = this.checked" >Hakier mode</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_googiel) } onclick="localStorage.u_googiel = this.checked" >Googiel</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_googielImg) } onclick="localStorage.u_googielImg = this.checked" >Googiel Obrazki (kliknij na obrazek aby wyszukać)</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczka) } onclick="localStorage.u_kaczka = this.checked" >Kaczka ${ language }</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczkaA) } onclick="localStorage.u_kaczkaA = this.checked" >Kaczka ${ languageAlter }</label><br />
-<label><input type="checkbox" >***** ***</label><br />
-<hr>
+<label><input type="checkbox" ${ check(localStorage.u_jpis) } onclick="localStorage.u_jpis = this.checked">***** ***</label><br />
+<hr />
 <details><summary>Calculator</summary><iframe width=99% height=700 src=https://www.cymath.com/ ></iframe></details>
-</hr>`
+<hr />`
 
     var infoElement = createElementFromHTML(
         infoElementText
@@ -83,17 +90,28 @@ Gdzie chcesz szukać informacji?<br />
     var ciala;
     var i;
     // Odpowiedzi
-    ciala = document.getElementsByClassName('answer_body');
-    for (i = 0; i < ciala.length; i++) {
-        ((i, ciala) => {setTimeout(() => {odp(ciala[i])})})(i, ciala);
-    }
-    // Pytania
+    const cyrb53 = function(str, seed = 0) {
+        let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
+        for (let i = 0, ch; i < str.length; i++) {
+            ch = str.charCodeAt(i);
+            h1 = Math.imul(h1 ^ ch, 2654435761);
+            h2 = Math.imul(h2 ^ ch, 1597334677);
+        }
+        h1 = Math.imul(h1 ^ (h1>>>16), 2246822507) ^ Math.imul(h2 ^ (h2>>>13), 3266489909);
+        h2 = Math.imul(h2 ^ (h2>>>16), 2246822507) ^ Math.imul(h1 ^ (h1>>>13), 3266489909);
+        return 4294967296 * (2097151 & h2) + (h1>>>0);
+    };
     ciala = document.getElementsByClassName('question_essence');
     for (i = 0; i < ciala.length; i++) {
-        ((i, ciala) => {setTimeout(() => {odp(ciala[i])})})(i, ciala);
+        ((i, ciala) => {setTimeout(() => {odp(ciala[i],'<details><summary>Pad</summary><iframe width="99%" height="700" src="https://pad.riseup.net/p/'+cyrb53(ciala[i].innerText)+'-keep" ></iframe></details>')})})(i, ciala);
+    }
+    // Pytania
+    ciala = document.getElementsByClassName('answer_body');
+    for (i = 0; i < ciala.length; i++) {
+        ((i, ciala) => {setTimeout(() => {odp(ciala[i], '')})})(i, ciala);
     }
     // Generowanie odpowiedzi.
-    function odp(cialo) {
+    function odp(cialo, appendix) {
         var tresc_html = cialo.innerHTML;
         var tresc = cialo.innerText;
         var lower_tresc = tresc.toLowerCase();
@@ -138,6 +156,7 @@ Gdzie chcesz szukać informacji?<br />
                 odpowiedz += '<details><summary>Googiel</summary><iframe width="99%" height="700" src="https://www.google.com/search?igu=1&q='+encodeURI(tresc)+'" ></iframe></details>';
             }
         }
+        odpowiedz+=appendix
         cialo.innerHTML = tresc_html+odpowiedz
         cialo.innerHTML += "<hr />"
     }
@@ -173,7 +192,7 @@ Gdzie chcesz szukać informacji?<br />
         })(lazy,i)
     }
     var imgs = document.getElementsByTagName('img');
-    imgs = [] //todo
+    //imgs = [] //todo
     for (i = 0; i < imgs.length; i++) {
         ((imgs, i) => {
             setTimeout(() => {
