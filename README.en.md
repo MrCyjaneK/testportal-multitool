@@ -20,7 +20,7 @@ So what can this tool do?
 
 # SO... How do I install it?
 
- - Install [this firefox addon](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testporta-multitool-edge.xpi)
+ - Install [this firefox addon](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi)
  - Or [this userscript](https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js) i wsio.
 
 p.s. come here from time to time to check for updates, I don't have auto-update thing yet.

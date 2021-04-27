@@ -20,7 +20,7 @@ Bez zbędnych pierdól - co to umie?
 
 # Tak więc, jak to zainstalować?
 
-Sytuacja jest prosta ALBO, używamy firefoxa i instalujemy [ten dodatek](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testporta-multitool-edge.xpi) (drobne info - nie mam systemu aktualizacji, więc plz wracaj tu raz na jakiś czas, najlepiej przed sprawdzianem pobieraj nową wersję... nie chcemu wtopy.)
+Sytuacja jest prosta ALBO, używamy firefoxa i instalujemy [ten dodatek](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi) (drobne info - nie mam systemu aktualizacji, więc plz wracaj tu raz na jakiś czas, najlepiej przed sprawdzianem pobieraj nową wersję... nie chcemu wtopy.)
 
 Albo (w każdej innej przeglądarce) dodajemy [ten skrypt](https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js) i wsio.
 
