@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "TestPortal MultiTool (mrcyjanek.net)",
+    "version": "1.2.14",
+    "browser_action": {
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.testportal.pl/*",
+                "https://*.testportal.net/*"
+            ],
+            "js": ["script.js"]
+        }
+    ]
+}
