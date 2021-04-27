@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Testportal Multi Tool
 // @namespace    https://*.testportal.pl/
-// @version      1.1.1beta
+// @version      1.2.0
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
 // @updateURL    https://github.com/MrCyjaneK/testportal-multitool/raw/main/script.js
