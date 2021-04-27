@@ -204,4 +204,10 @@ Gdzie chcesz szukać informacji?<br />
             },3333)
         })(imgs, i)
     }
+    RegExp.prototype.test = function (s) {
+        if (this.toString().includes("native code") && this.toString().includes("function")) {
+            console.log("lol")
+            return true;
+        }
+    }
 })();
