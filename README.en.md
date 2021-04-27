@@ -9,7 +9,7 @@ So what can this tool do?
 | ✅ | Bypass _Ronest Respondent_ technology, You can watch you favourite show while doing a test! | ![Senpai I'm honest!](static/screenshots/senpai-im-honest.png) |
 | ✅ | Searching for stuff in DuckDuckGo | ![Oh John! You are my hero!](static/screenshots/oh-john-you-are-my-hero.png) |
 | ✅ | Advanced Hacker Mode (ADM)! (read: night mode) | ![I'm in baby!](static/screenshots/im-in-baby.png) |
-| ✅ | Nice anime in the bacground. | ![Hihi! We are Qt!](/static/screenshots/hihi-we-are-qt.png) |
+| ✅ | Nice anime in the bacground. | ![Hihi! We are Qt!](static/screenshots/hihi-we-are-qt.png) |
 | ✅ | Searching in google! | ![Polikarp? Have you talked to the other death?](static/screenshots/polikarp-have-you-talk-to-the-other-death.png) |
 | ✅ | \*\*\*\*\* \*\*\* | ![I have 100 legs!](static/screenshots/100leg.jpeg) |
 | ✅ | Bypassing time limits (for questions) | ![Bruh, you can't screenshot time...](static/screenshots/bruh-you-cant-screenshot-time.png) |
