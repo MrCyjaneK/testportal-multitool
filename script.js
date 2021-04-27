@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Testportal Multi Tool
 // @namespace    https://*.testportal.pl/
-// @version      1.2.1
+// @version      1.2.2
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
 // @updateURL    https://github.com/MrCyjaneK/testportal-multitool/raw/main/script.js
@@ -18,6 +18,11 @@ onCountdownFinished = (() => { return 0 });
 //disable time limits
 // eslint-disable-next-line
 setInterval(() => {startTime = new Date().getTime()},777);
+
+if (localStorage.u_fancybg) {
+    document.body.style = "background-repeat: no-repeat; background-size: contain; background-image: url(https://wallpapercave.com/wp/2xF3MmY.jpg);"
+    document.getElementsByClassName('test-body-background')[0].style = "opacity: 0.8;"
+}
 setTimeout(() => {
     (function() {
         'use strict';
@@ -66,6 +71,7 @@ Ch3@ts: <span id="cheatscount">???</span> <a onclick="document.cookie = 'blurs=0
 By: Czarek Nakamoto (mrcyjanek.net) | <a onclick="alert(\`${ geneza }\`)" >Zgłoś błąd</a>. <br />
 Gdzie chcesz szukać informacji?<br />
 <label><input type="checkbox" ${ check(localStorage.u_hakierMode) } onclick="localStorage.u_hakierMode = this.checked" >Hakier mode</label><br />
+<label><input type="checkbox" ${ check(localStorage.u_fancybg) } onclick="localStorage.u_fancybg = this.checked" >Fancy bacground image</label><input id="animeurl" type="text" value=${ localStorage.animebg ? localStorage.animebg : "https://wallpapercave.com/wp/2xF3MmY.jpg" }></input><br />
 <label><input type="checkbox" ${ check(localStorage.u_googiel) } onclick="localStorage.u_googiel = this.checked" >Googiel</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_googielImg) } onclick="localStorage.u_googielImg = this.checked" >Googiel Obrazki (kliknij na obrazek aby wyszukać)</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczka) } onclick="localStorage.u_kaczka = this.checked" >Kaczka ${ language }</label><br />
@@ -105,7 +111,7 @@ Gdzie chcesz szukać informacji?<br />
         };
         ciala = document.getElementsByClassName('question_essence');
         for (i = 0; i < ciala.length; i++) {
-            ((i, ciala) => {setTimeout(() => {odp(ciala[i],'<details><summary>Pad</summary><iframe width="99%" height="700" src="https://pad.riseup.net/p/'+cyrb53(ciala[i].innerText)+'-keep" ></iframe></details>')})})(i, ciala);
+            ((i, ciala) => {setTimeout(() => {odp(ciala[i],'<details><summary>Pad</summary><iframe width="99%" height="700" src="https://pad.riseup.net/p/uwu'+cyrb53(ciala[i].innerText)+'-keep" ></iframe></details>')})})(i, ciala);
         }
         // Pytania
         ciala = document.getElementsByClassName('answer_body');
