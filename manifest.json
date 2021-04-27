@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "TestPortal MultiTool (mrcyjanek.net)",
-    "version": "1.2.14",
+    "version": "1.2.15",
     "browser_action": {
     },
     "content_scripts": [
