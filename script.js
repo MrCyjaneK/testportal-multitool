@@ -74,13 +74,13 @@ Ch3@ts: <span id="cheatscount">???</span> <a onclick="document.cookie = 'blurs=0
 By: Czarek Nakamoto (mrcyjanek.net) | <a onclick="alert(\`${ geneza }\`)" >Zgłoś błąd</a>. <br />
 Gdzie chcesz szukać informacji?<br />
 <label><input type="checkbox" ${ check(localStorage.u_hakierMode) } onclick="localStorage.u_hakierMode = this.checked" >Hakier mode</label><br />
-<label><input type="checkbox" ${ check(localStorage.u_fancybg) } onclick="localStorage.u_fancybg = this.checked" >Fancy bacground image</label><input id="animeurl" type="text" value=${ localStorage.animebg ? localStorage.animebg : "https://wallpapercave.com/wp/2xF3MmY.jpg" }></input><br />
+<label><input type="checkbox" ${ check(localStorage.u_fancybg) } onclick="localStorage.u_fancybg = this.checked" >Fancy bacground image</label><input id="animeurl" type="text" onchange="localStorage.animebg = this.value" value=${ localStorage.animebg ? localStorage.animebg : "https://wallpapercave.com/wp/2xF3MmY.jpg" }></input><br />
 <label><input type="checkbox" ${ check(localStorage.u_googiel) } onclick="localStorage.u_googiel = this.checked" >Googiel</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_googielImg) } onclick="localStorage.u_googielImg = this.checked" >Googiel Obrazki (kliknij na obrazek aby wyszukać)</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczka) } onclick="localStorage.u_kaczka = this.checked" >Kaczka ${ language }</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_kaczkaA) } onclick="localStorage.u_kaczkaA = this.checked" >Kaczka ${ languageAlter }</label><br />
 <label><input type="checkbox" ${ check(localStorage.u_jpis) } onclick="localStorage.u_jpis = this.checked">***** ***</label><br />
-<iframe width=99% heigh=128 src="https://mrcyjanek.net/projects/testportal-multitool/info.json" ></iframe>
+<iframe width=99% heigh=128 src="https://mrcyjanek.net/projects/testportal-multitool/info.html" ></iframe>
 <!-- ${document.getElementsByClassName('logo_wide')[0].src} -->
 <hr />
 <details><summary>Calculator</summary><iframe width=99% height=700 src="https://www.cymath.com/" ></iframe></details>
@@ -95,8 +95,10 @@ if (honestlogo[0]) {
     honestlogo[0].outerHTML = `<img width="64px" height="64px" src="https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/static/error.svg"></img>`
 }
 if (localStorage.u_fancybg == "true") {
-    document.body.style = "background-repeat: no-repeat; background-size: contain; background-image: url("+(document.getElementById('animeurl') ? document.getElementById('animeurl').value : "https://wallpapercave.com/wp/2xF3MmY.jpg")+");"
-    document.getElementsByClassName('test-body-background')[0].style = "opacity: 0.8;"
+    setTimeout(() => {
+        document.body.style = "background-repeat: no-repeat; background-size: contain; background-image: url("+document.getElementById('animeurl').value+");"
+        document.getElementsByClassName('test-body-background')[0].style = "opacity: 0.8;"
+    },128)
 }
 var infoElement = createElementFromHTML(
     infoElementText
