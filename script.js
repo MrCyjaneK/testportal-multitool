@@ -4,8 +4,8 @@
 // @version      1.2.16
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
-// @updateURL    https://github.com/MrCyjaneK/testportal-multitool/raw/main/script.js
-// @downloadURL  https://github.com/MrCyjaneK/testportal-multitool/raw/main/script.js
+// @updateURL    https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js
+// @downloadURL  https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js
 // @match        https://*.testportal.net/*
 // @match        https://*.testportal.pl/*
 // @grant        none
@@ -13,8 +13,21 @@
 console.log('[TESTPORTAL MULTITOOL] Started')
 if (typeof exportFunction !== "function") {
     function exportFunction(a,b,c) {
-        // suffer in silence.
+        console.log('exportFunction(',a,b,c,')')
+        window[c.defineAs] = a
+        document[c.defineAs] = a
     }
+}
+if (document.location.href.includes("/exam/LoadTestStart.html")) {
+    let honest = document.getElementsByClassName('honest-respondent-text')
+    if (honest[0]) {
+        honest[0].innerHTML = `W teście zastosowano technologię <i><b>"Uczciwy rozwiązujący"</b></i>. Jednak spokojna głowa, klikaj poza obszarem testu, rób co chcesz. Żadna próba opuszczenia karty przeglądarki z testem nie zostanie odnotowana. Przed rozpoczęciem zalecam otwarcie notatek, żebyś potem nie musiał ich szukać. <br />Powodzenia mordo, siedze w tym bagnie razem z tobą<br /><a href="https://mrcyjanek.net" target="_blank">Czarek Nakamoto.</a>`
+    }
+    let honestlogo = document.getElementsByClassName('honest-respondent-icon')
+    if (honestlogo[0]) {
+        honestlogo[0].outerHTML = `<img width="64px" height="64px" src="https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/static/error.svg"></img>`
+    }
+    return
 }
 // eslint-disable-next-line
 OwUKGkPT = (() => {})
@@ -90,15 +103,6 @@ Gdzie chcesz szukać informacji?<br />
 <hr />
 <details><summary>Calculator</summary><iframe width=99% height=700 src="https://www.cymath.com/" ></iframe></details>
 <hr />`
-
-let honest = document.getElementsByClassName('honest-respondent-text')
-if (honest[0]) {
-    honest[0].innerHTML = `W teście zastosowano technologię <i><b>"Uczciwy rozwiązujący"</b></i>. Jednak spokojna głowa, klikaj poza obszarem testu, rób co chcesz. Żadna próba opuszczenia karty przeglądarki z testem nie zostanie odnotowana. Przed rozpoczęciem zalecam otwarcie notatek, żebyś potem nie musiał ich szukać. <br />Powodzenia mordo, siedze w tym bagnie razem z tobą<br /><a href="https://mrcyjanek.net" target="_blank">Czarek Nakamoto.</a>`
-}
-let honestlogo = document.getElementsByClassName('honest-respondent-icon')
-if (honestlogo[0]) {
-    honestlogo[0].outerHTML = `<img width="64px" height="64px" src="https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/static/error.svg"></img>`
-}
 if (localStorage.u_fancybg == "true") {
     setTimeout(() => {
         document.body.style = "background-repeat: no-repeat; background-size: contain; background-image: url("+document.getElementById('animeurl').value+");"
