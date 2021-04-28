@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Testportal Multi Tool
 // @namespace    https://*.testportal.pl/
-// @version      1.2.15
+// @version      1.2.16
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
 // @updateURL    https://github.com/MrCyjaneK/testportal-multitool/raw/main/script.js
@@ -11,6 +11,11 @@
 // @grant        none
 // ==/UserScript==
 console.log('[TESTPORTAL MULTITOOL] Started')
+if (typeof exportFunction !== "function") {
+    function exportFunction(a,b,c) {
+        // suffer in silence.
+    }
+}
 // eslint-disable-next-line
 OwUKGkPT = (() => {})
 // eslint-disable-next-line
