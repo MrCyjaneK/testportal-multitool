@@ -6,7 +6,7 @@ Siema mordy, to jest mój dodatek, a [to jestem ja.](https://mrcyjanek.net/) Dzi
 
 | Build Status | Firefox Addon | UserScript |
 | ------------ | ------------- | ---------- |
-| [![Build Status](https://ci.mrcyjanek.net/badge/build-ext-testportal-multitool.svg)](https://ci.mrcyjanek.net/jobs/build-ext-testportal-multitool) | [![Firefox Addon](static/firefox.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi) | [![UserScript](static/javascript.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi) |
+| [![Build Status](https://ci.mrcyjanek.net/badge/build-ext-testportal-multitool.svg)](https://ci.mrcyjanek.net/jobs/build-ext-testportal-multitool) | [![Firefox Addon](static/firefox.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi) | [![UserScript](static/javascript.svg)](https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js) |
 
 
 Bez zbędnych pierdól - co to umie?
