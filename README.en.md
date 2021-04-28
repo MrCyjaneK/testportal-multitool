@@ -5,8 +5,9 @@ Sup ladies, my name is [Slim Shady.](https://mrcyjanek.net/) I'm a lead develope
 
 ## Downloads
 
-[![Firefox Addon](static/firefox.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi)
-
+| Build Status | Firefox Addon | UserScript |
+| ------------ | ------------- | ---------- |
+| [![Build Status](https://ci.mrcyjanek.net/badge/build-ext-testportal-multitool.svg)](https://ci.mrcyjanek.net/jobs/build-ext-testportal-multitool) | [![Firefox Addon](static/firefox.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi) | [![UserScript](static/javascript.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi) |
 ## So what can this tool do?
 
 |    |      |   |
