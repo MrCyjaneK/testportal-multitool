@@ -2,7 +2,7 @@
 
 | Build Status | Firefox Addon | UserScript |
 | ------------ | ------------- | ---------- |
-| [![Build Status](https://ci.mrcyjanek.net/badge/ae56e590?branch=main)](https://ci.mrcyjanek.net/repos/209) | [![Firefox Addon](static/firefox.svg)](https://static.mrcyjanek.net/laminarci/build-ext-testportal-multitool/latest/testportal-multitool-edge.xpi) | [![UserScript](static/javascript.svg)](https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js) |
+| [![Build Status](https://ci.mrcyjanek.net/badge/ae56e590?branch=main)](https://ci.mrcyjanek.net/repos/209) | [![Firefox Addon](static/firefox.svg)](https://static.mrcyjanek.net/abstruse/testportal/testportal-multitool-edge.xpi) | [![UserScript](static/javascript.svg)](https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js) |
 
 This document is available in polish and english:
 
