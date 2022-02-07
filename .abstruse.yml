@@ -1,0 +1,4 @@
+image: mrcyjanek/testportal-multitool:latest
+script:
+ - web-ext sign --api-key="$WEB_EXT_API_KEY" --api-secret="$WEB_EXT_API_SECRET" --channel=unlisted &>log.txt 
+ - cp $(find . -name "*.xpi") /archive/testportal-multitool-edge.xpi 
