@@ -11,8 +11,9 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+//(function() {
+//    'use strict';
+    console.log("[TESTPORTAL MULTITOOL] started")
     const original = RegExp.prototype.test;
     RegExp.prototype.test = function (s) {
         const string = this.toString();
@@ -70,4 +71,4 @@
     setTimeout(timeLimit, 0)
     setTimeout(answerSearch, 100)
     setTimeout(imageSearch, 200)
-})();
+//})();
