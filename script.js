@@ -56,32 +56,31 @@ function answerSearch() {
             elms[i].innerHTML += `<a target="_blank" href="https://duckduckgo.com/?q=${ encodeURIComponent(text) }">DDG</a> | <a target="_blank" href="https://google.com/search?q=${ encodeURIComponent(text) }&igu=1">Google</a>`
             //https://www.google.com/searchbyimage?igu=1&image_url='+encodeURI(a.src)+'
         }
-        })
+    })
 }
 function imageSearch() {
     var imgs = document.getElementsByTagName('img');
-//imgs = [] //todo
-for (let i = 0; i < imgs.length; i++) {
-    ((imgs, i) => {
-        setTimeout(() => {
-            if (imgs[i].innerHTML.includes("logo_wide logo_default")) {
-                return
-            }
-            if (imgs[i].getAttribute("src").includes('data:image')) {
-                imgs[i].setAttribute("src", imgs[i].getAttribute("data-src"))
-                imgs[i].setAttribute("class", "")
-            }
-            imgs[i].onclick = ((a) => { a = a.target; window.open("https://www.google.com/searchbyimage?igu=1&image_url="+encodeURI(a.src), '_blank');})
+    //imgs = [] //todo
+    for (let i = 0; i < imgs.length; i++) {
+        ((imgs, i) => {
+            setTimeout(() => {
+                if (imgs[i].innerHTML.includes("logo_wide logo_default")) {
+                    return
+                }
+                if (imgs[i].getAttribute("src").includes('data:image')) {
+                    imgs[i].setAttribute("src", imgs[i].getAttribute("data-src"))
+                    imgs[i].setAttribute("class", "")
+                }
+                imgs[i].onclick = ((a) => { a = a.target; window.open("https://www.google.com/searchbyimage?igu=1&image_url="+encodeURI(a.src), '_blank');})
 
-        })
-    })(imgs, i)
-}
+            })
+        })(imgs, i)
+    }
 }
 setTimeout(initPage, 100)
-if (window.location.href.includes("LoadTestStart.html")) {
-    return
+if (!window.location.href.includes("LoadTestStart.html")) {
+    setTimeout(timeLimit, 0)
+    setTimeout(answerSearch, 100)
+    setTimeout(imageSearch, 200)
 }
-setTimeout(timeLimit, 0)
-setTimeout(answerSearch, 100)
-setTimeout(imageSearch, 200)
 //})();
