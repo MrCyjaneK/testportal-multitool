@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Testportal Multi Tool
 // @namespace    https://*.testportal.pl/
-// @version      3.0.4
+// @version      3.0.5
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
 // @updateURL    https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js
@@ -81,7 +81,7 @@ function imageSearch() {
         })(imgs, i)
     }
 }
-setTimeout(initPage, 100)
+//setTimeout(initPage, 100)
 if (!window.location.href.includes("LoadTestStart.html")) {
     setTimeout(timeLimit, 0)
     setTimeout(answerSearch, 100)
