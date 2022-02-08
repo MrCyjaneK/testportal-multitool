@@ -38,6 +38,10 @@ function timeLimit() {
     document.hasFocus = () => {
         return true;
     };
+    document.getElementById("remaining_time_content").outerHTML = "";
+    document.getElementById("remaining_time_label").style.color = "#0bc279";
+    document.getElementById("remaining_time_label").style.fontWeight = 600;
+    document.getElementById("remaining_time_label").innerText = "Czas na odpowiedź: Tyle, ile ci potrzeba."
 }
 function answerSearch() {
     let hackClass = ["answer_body", "question_essence"]
@@ -60,7 +64,7 @@ function imageSearch() {
 for (let i = 0; i < imgs.length; i++) {
     ((imgs, i) => {
         setTimeout(() => {
-            if (imgs[i].innerHTML.includes("logo_default")) {
+            if (imgs[i].innerHTML.includes("logo_wide logo_default")) {
                 return
             }
             if (imgs[i].getAttribute("src").includes('data:image')) {
@@ -68,7 +72,8 @@ for (let i = 0; i < imgs.length; i++) {
                 imgs[i].setAttribute("class", "")
             }
             imgs[i].onclick = ((a) => { a = a.target; window.open("https://www.google.com/searchbyimage?igu=1&image_url="+encodeURI(a.src), '_blank');})
-        },333)
+
+        })
     })(imgs, i)
 }
 }
