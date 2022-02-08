@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Testportal Multi Tool
 // @namespace    https://*.testportal.pl/
-// @version      3.0.2
+// @version      3.0.4
 // @description  Ha-ha H@ck0wansko xd
 // @author       Czarek Nakamoto (mrcyjanek.net)
 // @updateURL    https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/script.js
@@ -32,7 +32,7 @@ function initPage() {
     //if (document.getElementsByClassName('test-card-body').length == 1) {
 
     //} else {
-    document.getElementsByClassName('test-card-body')[0].innerHTML += "Witaj byczq, skoncentruj sie na tescie, ale nie za bardzo, tak na luzie. Wszystko będzie git.<br />Możesz wychodzić poza kartę, szukać w przeglądarce i robić wszystkie te cuda, nauczyciel się nie dowie.<br /> Btw hopsaj na <a href=\"https://discord.gg/KhMuN7tJfF\" target=\"_blank\">discorda</a> <br />Z fartem. <br />~ Wiesz kto"
+    document.getElementsByClassName('test-card-body')[0].innerHTML += "Witaj byczq, skoncentruj sie na tescie, ale nie za bardzo, tak na luzie. Wszystko będzie git.<br />Mozesz wychodzic poza karte, szukac w przegladarce, lub innej aplikacji, i robic wszystkie te cuda, nauczyciel sie nie dowie.<br /> Btw hopsaj na <a href=\"https://discord.gg/KhMuN7tJfF\" target=\"_blank\">discorda</a> <br />Z fartem. <br />~ Wiesz kto"
     document.getElementsByClassName('test-card-content-with-icon__icon')[0].innerHTML = "<img src=\"https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/static/error.svg\" width=\"75\">"
     //}
 }
@@ -45,7 +45,7 @@ function timeLimit() {
     document.getElementById("remaining_time_content").outerHTML = "";
     document.getElementById("remaining_time_label").style.color = "#0bc279";
     document.getElementById("remaining_time_label").style.fontWeight = 600;
-    document.getElementById("remaining_time_label").innerText = "Czas na odpowiedź: Tyle, ile ci potrzeba."
+    document.getElementById("remaining_time_label").innerText = "Czas na odpowiedz: Tyle, ile ci potrzeba."
 }
 function answerSearch() {
     let hackClass = ["answer_body", "question_essence"]
