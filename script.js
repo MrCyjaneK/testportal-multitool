@@ -29,8 +29,12 @@ function initPage() {
     if (!window.location.href.includes("LoadTestStart.html")) {
         return
     }
-    document.getElementsByClassName('test-card-body')[0].innerHTML = "Witaj byczq, skoncentruj sie na tescie, ale nie za bardzo, tak na luzie. Wszystko będzie git.<br />Możesz wychodzić poza kartę, szukać w przeglądarce i robić wszystkie te cuda, nauczyciel się nie dowie.<br /> Btw hopsaj na <a href=\"https://discord.gg/KhMuN7tJfF\" target=\"_blank\">discorda</a> <br />Z fartem. <br />~ Wiesz kto"
+    //if (document.getElementsByClassName('test-card-body').length == 1) {
+
+    //} else {
+    document.getElementsByClassName('test-card-body')[0].innerHTML += "Witaj byczq, skoncentruj sie na tescie, ale nie za bardzo, tak na luzie. Wszystko będzie git.<br />Możesz wychodzić poza kartę, szukać w przeglądarce i robić wszystkie te cuda, nauczyciel się nie dowie.<br /> Btw hopsaj na <a href=\"https://discord.gg/KhMuN7tJfF\" target=\"_blank\">discorda</a> <br />Z fartem. <br />~ Wiesz kto"
     document.getElementsByClassName('test-card-content-with-icon__icon')[0].innerHTML = "<img src=\"https://git.mrcyjanek.net/mrcyjanek/testportal-multitool/raw/branch/main/static/error.svg\" width=\"75\">"
+    //}
 }
 function timeLimit() {
     window.startTime = Infinity;
